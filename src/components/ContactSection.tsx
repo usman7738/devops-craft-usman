@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -60,15 +61,48 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // Try to send email via Supabase function
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
+
+      if (error) {
+        // If Supabase function fails, open email client as fallback
+        const subject = encodeURIComponent(`Portfolio Contact: ${formData.subject}`);
+        const body = encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+        );
+        window.open(`mailto:usmanmerchant7738@gmail.com?subject=${subject}&body=${body}`);
+        
+        toast({
+          title: "Email Client Opened",
+          description: "Your default email client has been opened with the message. Please send the email manually.",
+        });
+      } else {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+      }
+      
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      // Fallback to email client
+      const subject = encodeURIComponent(`Portfolio Contact: ${formData.subject}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      );
+      window.open(`mailto:usmanmerchant7738@gmail.com?subject=${subject}&body=${body}`);
+      
       toast({
-        title: "Message Sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+        title: "Email Client Opened",
+        description: "Your default email client has been opened. Please send the email manually.",
       });
       setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 2000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const getColorClasses = (color: string) => {

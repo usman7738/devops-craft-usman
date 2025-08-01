@@ -1,4 +1,4 @@
-import { GraduationCap, Calendar, MapPin, Award, BookOpen, TrendingUp } from 'lucide-react';
+import { GraduationCap, Calendar, MapPin, BookOpen, TrendingUp } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -26,31 +26,6 @@ const EducationSection = () => {
     "Web Technologies",
     "System Administration",
     "Network Security"
-  ];
-
-  const academicAchievements = [
-    {
-      title: "Dean's List",
-      description: "Consistently maintained high academic performance",
-      year: "2020-2022"
-    },
-    {
-      title: "Technical Project Excellence",
-      description: "Led multiple software development projects",
-      year: "2021-2022"
-    },
-    {
-      title: "Industry Readiness",
-      description: "Completed internships and practical training",
-      year: "2021"
-    }
-  ];
-
-  const skillsDeveloped = [
-    { category: "Programming", skills: ["Java", "Python", "C++", "JavaScript"] },
-    { category: "Databases", skills: ["MySQL", "MongoDB", "PostgreSQL"] },
-    { category: "Web Technologies", skills: ["HTML/CSS", "React", "Node.js"] },
-    { category: "System Administration", skills: ["Linux", "Windows Server", "Networking"] }
   ];
 
   return (
@@ -142,92 +117,36 @@ const EducationSection = () => {
           </Card>
         </div>
 
-        {/* Academic Details Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
-          {/* Relevant Coursework */}
-          <Card className="glass border-card-border">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-secondary rounded-lg flex items-center justify-center">
-                  <BookOpen className="h-5 w-5 text-secondary-foreground" />
-                </div>
-                Relevant Coursework
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-2 gap-2">
-                {relevantCoursework.map((course, index) => (
-                  <Badge 
-                    key={index}
-                    variant="outline"
-                    className="justify-start p-2 text-xs bg-muted/30 border-muted hover:bg-secondary/10 hover:border-secondary/30 transition-colors"
-                  >
-                    {course}
-                  </Badge>
-                ))}
-              </div>
-              <p className="text-xs text-muted-foreground mt-4">
-                Core IT subjects providing strong foundation for DevOps and cloud engineering career.
-              </p>
-            </CardContent>
-          </Card>
-
-          {/* Academic Achievements */}
-          <Card className="glass border-card-border">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-accent rounded-lg flex items-center justify-center">
-                  <Award className="h-5 w-5 text-accent-foreground" />
-                </div>
-                Academic Achievements
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                {academicAchievements.map((achievement, index) => (
-                  <div key={index} className="border-l-2 border-primary/30 pl-4">
-                    <div className="flex justify-between items-start mb-1">
-                      <h4 className="font-semibold text-sm">{achievement.title}</h4>
-                      <Badge variant="outline" className="text-xs">
-                        {achievement.year}
-                      </Badge>
-                    </div>
-                    <p className="text-xs text-muted-foreground">{achievement.description}</p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Skills Developed During Education */}
-        <Card className="glass border-card-border">
+        {/* Relevant Coursework */}
+        <Card className="glass border-card-border max-w-4xl mx-auto mb-12">
           <CardHeader>
-            <CardTitle className="text-center">Skills Developed During Education</CardTitle>
+            <CardTitle className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-gradient-secondary rounded-lg flex items-center justify-center">
+                <BookOpen className="h-5 w-5 text-secondary-foreground" />
+              </div>
+              Relevant Coursework
+            </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {skillsDeveloped.map((skillGroup, index) => (
-                <div key={index} className="text-center">
-                  <h4 className="font-semibold mb-3 text-primary">{skillGroup.category}</h4>
-                  <div className="space-y-2">
-                    {skillGroup.skills.map((skill, skillIndex) => (
-                      <div 
-                        key={skillIndex}
-                        className="text-sm text-muted-foreground py-1 px-2 bg-muted/20 rounded"
-                      >
-                        {skill}
-                      </div>
-                    ))}
-                  </div>
-                </div>
+            <div className="grid grid-cols-2 gap-2">
+              {relevantCoursework.map((course, index) => (
+                <Badge 
+                  key={index}
+                  variant="outline"
+                  className="justify-start p-2 text-xs bg-muted/30 border-muted hover:bg-secondary/10 hover:border-secondary/30 transition-colors"
+                >
+                  {course}
+                </Badge>
               ))}
             </div>
+            <p className="text-xs text-muted-foreground mt-4">
+              Core IT subjects providing strong foundation for DevOps and cloud engineering career.
+            </p>
           </CardContent>
         </Card>
 
         {/* Education to Career Bridge */}
-        <div className="mt-12 text-center">
+        <div className="text-center">
           <Card className="glass border-card-border p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-6">From Academia to Industry</h3>
             <p className="text-muted-foreground leading-relaxed mb-6">
