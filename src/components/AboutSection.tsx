@@ -59,24 +59,22 @@ const AboutSection = () => {
             
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                With over 3 years of hands-on experience in DevOps and cloud engineering, I specialize in 
-                designing, implementing, and maintaining scalable infrastructure solutions across multiple 
-                cloud platforms. My expertise spans the entire DevOps lifecycle, from initial architecture 
-                design to production deployment and monitoring.
+                Experienced DevOps Engineer with a strong background in building, deploying, and managing scalable 
+                applications and infrastructure across AWS, Azure, and GCP. Proven expertise in automating CI/CD 
+                pipelines, orchestrating containers with Kubernetes, and provisioning infrastructure using Terraform 
+                and Ansible.
               </p>
               
               <p>
-                At LTIMINDTREE, I played a crucial role in managing cloud infrastructure for CITI Bank, 
-                ensuring 99% uptime for mission-critical banking systems. This experience has honed my 
-                skills in high-availability architecture, security compliance, and performance optimization 
-                in regulated environments.
+                Skilled in supporting mission-critical systems, including banking applications, with a focus on 
+                high availability, security, and performance. At LTIMINDTREE, I managed CITI Bank's infrastructure 
+                ensuring 99% uptime across global regions while supporting 500+ enterprise applications.
               </p>
               
               <p>
-                I'm passionate about automation, believing that repeatable, reliable processes are the 
-                foundation of modern software delivery. Whether it's Infrastructure as Code, CI/CD 
-                pipelines, or container orchestration, I strive to eliminate manual processes and 
-                create self-healing systems.
+                Adept at working in agile environments and leveraging tools such as GitHub, Jenkins, Docker, Helm, 
+                and ServiceNow to deliver reliable, cost-optimized DevOps solutions. Experienced in AI/ML workflow 
+                deployments and building GPU-enabled Kubernetes clusters for advanced computing workloads.
               </p>
             </div>
 

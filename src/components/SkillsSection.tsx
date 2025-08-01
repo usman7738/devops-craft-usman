@@ -6,12 +6,12 @@ const SkillsSection = () => {
   const skillCategories = [
     {
       icon: Cloud,
-      title: "Cloud Platforms",
+      title: "Cloud Infrastructure",
       color: "primary",
       skills: [
         { name: "AWS", level: 90, tools: ["EC2", "S3", "Lambda", "VPC", "RDS", "SNS", "IAM", "CloudWatch", "ECS", "EKS", "ALB", "NLB"] },
         { name: "Azure", level: 85, tools: ["Azure DevOps", "VM", "Storage Accounts", "AKS", "VNET", "Firewall", "Load Balancer", "Application Gateway", "Azure Monitor", "RBAC"] },
-        { name: "GCP", level: 75, tools: ["Compute Engine", "Cloud Storage", "Cloud Run", "GKE", "Load Balancer"] }
+        { name: "GCP", level: 80, tools: ["Compute Engine", "Cloud Storage", "Cloud Run", "GKE", "Load Balancer"] }
       ]
     },
     {
@@ -19,10 +19,10 @@ const SkillsSection = () => {
       title: "DevOps Tools",
       color: "secondary",
       skills: [
-        { name: "Container Orchestration", level: 88, tools: ["Docker", "Kubernetes", "Helm"] },
-        { name: "Infrastructure as Code", level: 85, tools: ["Terraform", "Ansible", "ARM Templates"] },
-        { name: "Monitoring & Observability", level: 80, tools: ["Prometheus", "Grafana", "ELK Stack"] },
-        { name: "Web Servers", level: 85, tools: ["Apache Tomcat", "Nginx", "IIS"] }
+        { name: "Container Orchestration", level: 90, tools: ["Docker", "Kubernetes", "Helm", "EKS", "AKS", "GKE", "K3s"] },
+        { name: "Infrastructure as Code", level: 88, tools: ["Terraform", "Ansible", "ARM Templates"] },
+        { name: "Monitoring & Observability", level: 85, tools: ["Prometheus", "Grafana", "ELK Stack", "CloudWatch", "Azure Monitor"] },
+        { name: "Web Servers", level: 80, tools: ["Apache Tomcat", "Nginx"] }
       ]
     },
     {
@@ -30,9 +30,9 @@ const SkillsSection = () => {
       title: "CI/CD & Version Control",
       color: "accent",
       skills: [
-        { name: "CI/CD Platforms", level: 90, tools: ["Jenkins", "GitHub Actions", "Bitbucket Pipelines", "Azure DevOps"] },
+        { name: "CI/CD Platforms", level: 92, tools: ["Jenkins", "GitHub Actions", "Bitbucket Pipelines", "Azure DevOps", "ArgoCD"] },
         { name: "Version Control", level: 95, tools: ["Git", "GitHub", "Bitbucket", "Azure Repos"] },
-        { name: "Artifact Management", level: 75, tools: ["Docker Registry", "Azure Container Registry", "AWS ECR"] }
+        { name: "Container Registry", level: 85, tools: ["Docker Registry", "Azure Container Registry", "AWS ECR"] }
       ]
     },
     {
@@ -40,9 +40,9 @@ const SkillsSection = () => {
       title: "Programming & Scripting",
       color: "primary",
       skills: [
-        { name: "Scripting Languages", level: 85, tools: ["Bash", "PowerShell", "Python"] },
-        { name: "Configuration Languages", level: 90, tools: ["YAML", "JSON", "HCL (Terraform)", "XML"] },
-        { name: "Query Languages", level: 70, tools: ["SQL", "KQL (Kusto)", "PromQL"] }
+        { name: "Scripting Languages", level: 85, tools: ["Bash", "PowerShell", "Python (Basic)"] },
+        { name: "Configuration Languages", level: 90, tools: ["YAML", "HCL", "JSON", "XML"] },
+        { name: "Networking & Others", level: 80, tools: ["TCP/IP", "HTTP", "VPN", "DNS", "FTP", "SSH", "ServiceNow"] }
       ]
     },
     {
@@ -57,12 +57,12 @@ const SkillsSection = () => {
     },
     {
       icon: Monitor,
-      title: "Monitoring & Security",
+      title: "Advanced Technologies",
       color: "accent",
       skills: [
-        { name: "Application Performance", level: 85, tools: ["New Relic", "Datadog", "Application Insights"] },
-        { name: "Security Tools", level: 80, tools: ["RBAC", "Key Vault", "Security Groups", "IAM Policies"] },
-        { name: "Log Management", level: 85, tools: ["ELK Stack", "Splunk", "Azure Log Analytics"] }
+        { name: "AI/ML Infrastructure", level: 80, tools: ["Hugging Face", "OpenAI", "Deepseek", "JupyterHub", "NVIDIA GPU Operator"] },
+        { name: "ITIL Processes", level: 85, tools: ["Incident Management", "Change Management", "Problem Management", "ServiceNow"] },
+        { name: "Enterprise Support", level: 90, tools: ["Major Incident Management", "COB Drills", "Multi-region Support"] }
       ]
     }
   ];
@@ -161,7 +161,7 @@ const SkillsSection = () => {
             {[
               "Kubernetes", "Docker", "Terraform", "Ansible", "Jenkins", "GitHub Actions",
               "AWS", "Azure", "GCP", "Prometheus", "Grafana", "ELK Stack",
-              "Linux", "Python", "Bash", "PowerShell", "YAML", "HCL"
+              "Linux", "Python", "Bash", "PowerShell", "YAML", "HCL", "ArgoCD", "Helm", "ServiceNow"
             ].map((tech, index) => (
               <Badge 
                 key={index}

@@ -17,7 +17,7 @@ const ExperienceSection = () => {
         "Establishing CI/CD best practices and automation frameworks",
         "Mentoring team members on DevOps tools and methodologies"
       ],
-      technologies: ["AWS", "Kubernetes", "Terraform", "Jenkins", "Docker", "Python"],
+      technologies: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform", "Jenkins", "GitHub Actions"],
       current: true
     },
     {
@@ -28,16 +28,21 @@ const ExperienceSection = () => {
       type: "Full-time",
       description: "Managed multi-cloud infrastructure for CITI Bank's mission-critical banking systems with 500+ global applications.",
       highlights: [
-        "Achieved 99% uptime for CITI Bank's critical banking infrastructure",
-        "Administered Linux/Unix and Windows servers across multiple environments",
-        "Implemented container orchestration using Kubernetes and Docker",
-        "Automated CI/CD pipelines reducing deployment time by 60%",
-        "Managed cost optimization initiatives saving 25% in cloud spend",
-        "Supported AI/ML workflow deployments and data pipeline automation",
-        "Led incident response and troubleshooting for production systems",
-        "Implemented monitoring and alerting solutions using Prometheus and Grafana"
+        "Administered Linux/Unix and Windows servers for CITI Bank, ensuring 99% uptime for mission-critical systems across global regions",
+        "Designed and managed cloud infrastructure across AWS, Azure, and GCP with hands-on experience in compute, networking, databases, storage, IAM, monitoring, DNS, VPNs, autoscaling, and load balancing",
+        "Provisioned and configured infrastructure using Terraform and Ansible, improving system reliability and reducing manual configuration errors",
+        "Built and deployed containerized applications using Docker, orchestrated via EKS, AKS, GKE, and K3s across environments (Dev, UAT, Prod, COB)",
+        "Automated and maintained CI/CD pipelines using Jenkins, GitHub Actions, Bitbucket Pipelines, ArgoCD, and Azure DevOps",
+        "Deployed and managed scalable GitHub Actions self-hosted runners on Kubernetes using Actions Runner Controller and Helm with GitHub App-based authentication",
+        "Implemented centralized logging and monitoring using ELK, CloudWatch, Azure Monitor, Prometheus, and Grafana for proactive observability",
+        "Deployed and managed open-source AI/ML workflows (e.g., Hugging Face) integrated with platforms like OpenAI and Deepseek",
+        "Built a GPU-enabled K3s Kubernetes cluster integrated with NVIDIA GPU Operator, KAI Scheduler, and JupyterHub for multi-user fractional GPU sharing",
+        "Executed cloud cost optimization strategies across AWS, Azure, and GCP, resulting in significant savings for multiple clients",
+        "Supported 500+ enterprise applications across NAM, EMEA, APAC, and LATAM regions, including participation in Continuity of Business (COB) drills",
+        "Actively participated in Major Incident Management, collaborating with app owners and teams for swift issue resolution",
+        "Well-versed in ITIL processes including Incident, Change, and Problem Management, with hands-on experience in ServiceNow"
       ],
-      technologies: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform", "Ansible", "Jenkins", "Prometheus", "Grafana"],
+      technologies: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform", "Ansible", "Jenkins", "GitHub Actions", "Bitbucket Pipelines", "ArgoCD", "ELK Stack", "Prometheus", "Grafana", "Helm", "ServiceNow"],
       current: false
     }
   ];
